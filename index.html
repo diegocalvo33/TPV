@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+		<!-- Animate CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
+
+		<!-- Fontawesome -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		
+		<!-- Styles CSS -->
+		<style>
+			.box
+			{
+				display: inline-block;
+			}
+			@media screen and ( max-width: 527px )
+			{
+				.content
+				{
+					height: 440px;
+					width: 320px;
+				}
+				#box-left
+				{
+					height: 220px;
+					width: 320px;
+				}
+				#box-right
+				{
+					height: 220px;
+					width: 320px;
+				}
+			}
+			@media screen and ( min-width: 528px )
+			{
+				.content
+				{
+					height: 239px;
+					width: 528px;
+				}
+				#box-left
+				{
+					height: 239px;
+					width: 264px;
+				}
+				#box-right
+				{
+					height: 239px;
+					width: 264px;
+				}
+			}
+		</style>
+
+		<title>DCT Prime&reg; | TPV</title>
+	</head>
+	<body>
+		<section class="content" id="content">
+			<div class="box" id="box-left" style="overflow-x: hidden; overflow-y: scroll; float: left;">
+				<center style="margin-top: 3.5rem; display: none;">
+					<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+				</center>
+				<table class="table table-sm table-hover" style="font-size: 10px; display: ;">
+					<tbody>
+						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+							<td>1.000</td>
+							<td>Coca cola</td>
+							<td>23<br>23</td>
+							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+						</tr>
+						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+							<td>1.000</td>
+							<td>Coca cola</td>
+							<td>23<br>23</td>
+							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+						</tr>
+						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+							<td>1.000</td>
+							<td>Coca cola</td>
+							<td>23<br>23</td>
+							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+						</tr>
+						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+							<td>1.000</td>
+							<td>Coca cola</td>
+							<td>23<br>23</td>
+							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="box" id="box-right" style="float: right;">
+				<table style="margin: 0 auto; width: 80%;" id="search-SKU-table">
+					<tbody>
+						<tr>
+							<td style="display: none; width: 60px;" id="add_by_SKU_quantity_div">
+								<input class="form-control form-control-sm" type="number" value="1">
+							</td>
+							<td
+								<div class="input-group input-group-sm">
+									<div class="input-group-prepend">
+										<span class="input-group-text">
+											<i class="fa fa-toggle-off" aria-hidden="true" style="cursor: pointer;" onclick="changeMethod( 'off' );" id="change-method-off"></i>
+											<i class="fa fa-toggle-on" aria-hidden="true" style="cursor: pointer; display: none;" onclick="changeMethod( 'on' );" id="change-method-on"></i>
+										</span>
+									</div>
+									<input type="text" class="form-control">
+									<div class="input-group-append" id="add_by_SKU_search_button">
+										<span class="input-group-text">
+											<i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
+										</span>
+									</div>
+								</div>
+							</td>
+							<td style="display: none; width: 90px;" id="add_by_SKU_discount_div">
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control">
+									<div class="input-group-append">
+										<span class="input-group-text">
+											<i class="fa fa-usd" aria-hidden="true" style="cursor: pointer;"></i>
+										</span>
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<div style="overflow-x: hidden; overflow-y: scroll; width: 100%; height: 200px;">
+					<center style="margin-top: 3.5rem; display: none;">
+						<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+					</center>
+					<table class="table table-sm table-hover" style="display: block;">
+						<tbody>
+							<tr>
+								<td style="width: 60px;" id="quantity_td">
+									<input type="number" class="form-control form-control-sm" value="1">
+								</td>
+								<td style="width: 60px;">
+									<input type="text" value="Coca cola de 2 litros edició especial moulin rouge" size="14" style="background: transparent; border: none; font-size: 10px;" readonly>
+								</td>
+								<td id="price_td">
+									<select class="form-control form-control-sm">
+										<option>15.00</option>
+										<option>23.00</option>
+									</select>
+								</td>
+								<td style="display: none; width: 90px;" id="discount_td">
+									<div class="input-group input-group-sm">
+										<input type="number" class="form-control">
+										<div class="input-group-append">
+											<span class="input-group-text">
+												<i class="fa fa-percent" aria-hidden="true" onclick="changeTypeOfDiscount( 'percent' );" style="cursor: pointer; display: none;" id="change-type-of-discount-percent"></i>
+												<i class="fa fa-usd" aria-hidden="true" onclick="changeTypeOfDiscount( 'usd' );" id="change-type-of-discount-usd" style="cursor: pointer;"></i>
+											</span>
+										</div>
+									</div>
+								</td>
+								<td>
+									<span>
+										<i class="fa fa-sort" aria-hidden="true" style="cursor: pointer;" onclick="sort();"></i>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+
+		<!-- AJAX with jQuery -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<!-- Funtions JS -->
+		<script>
+			function changeMethod( method )
+			{
+				if ( method == "off" )
+				{
+					document.getElementById( "search-SKU-table" ).removeAttribute( "style" ); 
+					$( "#change-method-on" ).show();
+					$( "#change-method-off" ).hide();
+					$( "#add_by_SKU_quantity_div" ).show();
+					$( "#add_by_SKU_discount_div" ).show();
+					$( "#add_by_SKU_search_button" ).hide();
+				}else
+				{
+					document.getElementById( "search-SKU-table" ).style = "margin: 0 auto; width: 80%;";
+					$( "#change-method-on" ).hide();
+					$( "#change-method-off" ).show();
+					$( "#add_by_SKU_quantity_div" ).hide();
+					$( "#add_by_SKU_discount_div" ).hide();
+					$( "#add_by_SKU_search_button" ).show();		
+				}
+			}
+
+			function sort()
+			{
+				if ( $( "#discount_td" ).is( ":hidden" ) )
+				{
+					$( "#discount_td" ).show();
+					$( "#price_td" ).hide();
+				}else
+				{
+					$( "#discount_td" ).hide();
+					$( "#price_td" ).show();
+				}
+			}
+
+			function changeTypeOfDiscount( type )
+			{
+				if ( type == "usd" )
+				{
+					$( "#change-type-of-discount-percent" ).show();
+					$( "#change-type-of-discount-usd" ).hide();
+				}else
+				{
+					$( "#change-type-of-discount-percent" ).hide();
+					$( "#change-type-of-discount-usd" ).show();		
+				}
+			}
+		</script>
+	</body>
+</html>
