@@ -6,6 +6,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
 
+		<link rel="stylesheet" href="fullpage.css">
+		<!-- <link rel="stylesheet" href="examples.css"> -->
+
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -14,8 +17,7 @@
 
 		<!-- Fontawesome -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-		
-		<!-- Styles CSS -->
+
 		<style>
 			.box
 			{
@@ -59,128 +61,161 @@
 			}
 		</style>
 
-		<title>DCT Prime&reg; | TPV</title>
+		<title>Experimento</title>
 	</head>
 	<body>
-		<section class="content" id="content">
-			<div class="box" id="box-left" style="overflow-x: hidden; overflow-y: scroll; float: left;">
-				<center style="margin-top: 3.5rem; display: none;">
-					<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-				</center>
-				<table class="table table-sm table-hover" style="font-size: 10px; display: ;">
-					<tbody>
-						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
-							<td>1.000</td>
-							<td>Coca cola</td>
-							<td>23<br>23</td>
-							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
-						</tr>
-						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
-							<td>1.000</td>
-							<td>Coca cola</td>
-							<td>23<br>23</td>
-							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
-						</tr>
-						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
-							<td>1.000</td>
-							<td>Coca cola</td>
-							<td>23<br>23</td>
-							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
-						</tr>
-						<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
-							<td>1.000</td>
-							<td>Coca cola</td>
-							<td>23<br>23</td>
-							<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
-						</tr>
-					</tbody>
-				</table>
+		<div id="fullpage">
+			<div class="section " id="section0">
+				<h1>Section 1</h1>
 			</div>
-			<div class="box" id="box-right" style="float: right;">
-				<table style="margin: 0 auto; width: 80%;" id="search-SKU-table">
-					<tbody>
-						<tr>
-							<td style="display: none; width: 60px;" id="add_by_SKU_quantity_div">
-								<input class="form-control form-control-sm" type="number" value="1">
-							</td>
-							<td
-								<div class="input-group input-group-sm">
-									<div class="input-group-prepend">
-										<span class="input-group-text">
-											<i class="fa fa-toggle-off" aria-hidden="true" style="cursor: pointer;" onclick="changeMethod( 'off' );" id="change-method-off"></i>
-											<i class="fa fa-toggle-on" aria-hidden="true" style="cursor: pointer; display: none;" onclick="changeMethod( 'on' );" id="change-method-on"></i>
-										</span>
-									</div>
-									<input type="text" class="form-control">
-									<div class="input-group-append" id="add_by_SKU_search_button">
-										<span class="input-group-text">
-											<i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
-										</span>
-									</div>
+			<div class="section active" id="section1">
+				<div class="slide" id="slide1">
+					<div class="intro">
+						<h1>Slide 2.1</h1>
+					</div>
+				</div>
+				<div class="slide active" id="slide2">
+					<div class="intro">
+						<section class="content" id="content">
+							<div class="box" id="box-left" style="overflow-x: hidden; overflow-y: scroll; float: left;">
+								<center style="margin-top: 3.5rem; display: none;">
+									<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+								</center>
+								<table class="table table-sm table-hover" style="font-size: 10px; display: ;">
+									<tbody>
+										<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+											<td>1.000</td>
+											<td>Coca cola</td>
+											<td>23<br>23</td>
+											<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+										</tr>
+										<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+											<td>1.000</td>
+											<td>Coca cola</td>
+											<td>23<br>23</td>
+											<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+										</tr>
+										<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+											<td>1.000</td>
+											<td>Coca cola</td>
+											<td>23<br>23</td>
+											<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+										</tr>
+										<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
+											<td>1.000</td>
+											<td>Coca cola</td>
+											<td>23<br>23</td>
+											<td>$0.00 (0.00%)<br> $0.00 (0.00%)</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="box" id="box-right" style="float: right;">
+								<table style="margin: 0 auto; width: 80%;" id="search-SKU-table">
+									<tbody>
+										<tr>
+											<td style="display: none; width: 60px;" id="add_by_SKU_quantity_div">
+												<input class="form-control form-control-sm" type="number" value="1">
+											</td>
+											<td
+												<div class="input-group input-group-sm">
+													<div class="input-group-prepend">
+														<span class="input-group-text">
+															<i class="fa fa-toggle-off" aria-hidden="true" style="cursor: pointer;" onclick="changeMethod( 'off' );" id="change-method-off"></i>
+															<i class="fa fa-toggle-on" aria-hidden="true" style="cursor: pointer; display: none;" onclick="changeMethod( 'on' );" id="change-method-on"></i>
+														</span>
+													</div>
+													<input type="text" class="form-control">
+													<div class="input-group-append" id="add_by_SKU_search_button">
+														<span class="input-group-text">
+															<i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
+														</span>
+													</div>
+												</div>
+											</td>
+											<td style="display: none; width: 90px;" id="add_by_SKU_discount_div">
+												<div class="input-group input-group-sm">
+													<input type="text" class="form-control">
+													<div class="input-group-append">
+														<span class="input-group-text">
+															<i class="fa fa-usd" aria-hidden="true" style="cursor: pointer;"></i>
+														</span>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<div style="overflow-x: hidden; overflow-y: scroll; width: 100%; height: 200px;">
+									<center style="margin-top: 3.5rem; display: none;">
+										<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+									</center>
+									<table class="table table-sm table-hover" style="display: block;">
+										<tbody>
+											<tr>
+												<td style="width: 60px;" id="quantity_td">
+													<input type="number" class="form-control form-control-sm" value="1">
+												</td>
+												<td style="width: 60px;">
+													<input type="text" value="Coca cola de 2 litros edició especial moulin rouge" size="14" style="background: transparent; border: none; font-size: 10px;" readonly>
+												</td>
+												<td id="price_td">
+													<select class="form-control form-control-sm">
+														<option>15.00</option>
+														<option>23.00</option>
+													</select>
+												</td>
+												<td style="display: none; width: 90px;" id="discount_td">
+													<div class="input-group input-group-sm">
+														<input type="number" class="form-control">
+														<div class="input-group-append">
+															<span class="input-group-text">
+																<i class="fa fa-percent" aria-hidden="true" onclick="changeTypeOfDiscount( 'percent' );" style="cursor: pointer; display: none;" id="change-type-of-discount-percent"></i>
+																<i class="fa fa-usd" aria-hidden="true" onclick="changeTypeOfDiscount( 'usd' );" id="change-type-of-discount-usd" style="cursor: pointer;"></i>
+															</span>
+														</div>
+													</div>
+												</td>
+												<td>
+													<span>
+														<i class="fa fa-sort" aria-hidden="true" style="cursor: pointer;" onclick="sort();"></i>
+													</span>
+												</td>
+											</tr>
+										</tbody>
+									</table>
 								</div>
-							</td>
-							<td style="display: none; width: 90px;" id="add_by_SKU_discount_div">
-								<div class="input-group input-group-sm">
-									<input type="text" class="form-control">
-									<div class="input-group-append">
-										<span class="input-group-text">
-											<i class="fa fa-usd" aria-hidden="true" style="cursor: pointer;"></i>
-										</span>
-									</div>
-								</div>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-				<div style="overflow-x: hidden; overflow-y: scroll; width: 100%; height: 200px;">
-					<center style="margin-top: 3.5rem; display: none;">
-						<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
-					</center>
-					<table class="table table-sm table-hover" style="display: block;">
-						<tbody>
-							<tr>
-								<td style="width: 60px;" id="quantity_td">
-									<input type="number" class="form-control form-control-sm" value="1">
-								</td>
-								<td style="width: 60px;">
-									<input type="text" value="Coca cola de 2 litros edició especial moulin rouge" size="14" style="background: transparent; border: none; font-size: 10px;" readonly>
-								</td>
-								<td id="price_td">
-									<select class="form-control form-control-sm">
-										<option>15.00</option>
-										<option>23.00</option>
-									</select>
-								</td>
-								<td style="display: none; width: 90px;" id="discount_td">
-									<div class="input-group input-group-sm">
-										<input type="number" class="form-control">
-										<div class="input-group-append">
-											<span class="input-group-text">
-												<i class="fa fa-percent" aria-hidden="true" onclick="changeTypeOfDiscount( 'percent' );" style="cursor: pointer; display: none;" id="change-type-of-discount-percent"></i>
-												<i class="fa fa-usd" aria-hidden="true" onclick="changeTypeOfDiscount( 'usd' );" id="change-type-of-discount-usd" style="cursor: pointer;"></i>
-											</span>
-										</div>
-									</div>
-								</td>
-								<td>
-									<span>
-										<i class="fa fa-sort" aria-hidden="true" style="cursor: pointer;" onclick="sort();"></i>
-									</span>
-								</td>
-							</tr>
-						</tbody>
-					</table>
+							</div>
+						</section>
+					</div>
+				</div>
+				<div class="slide" id="slide3">
+					<h1>Slide 2.3</h1>
 				</div>
 			</div>
-		</section>
+			<div class="section" id="section2">
+				<div class="intro">
+					<h1>Section 3</h1>
+				</div>
+			</div>
+		</div>
 
 		<!-- AJAX with jQuery -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-		<!-- Funtions JS -->
+		<!-- Fullpage JS -->
+		<script src="fullpage.js"></script>
+		<!-- <script src="examples.js"></script> -->
 		<script>
+			var myFullpage = new fullpage( "#fullpage", {
+
+				anchors: [ "firstPage", "secondPage", "3rdPage", "4thpage", "lastPage" ],
+				menu: "#menu",
+				lazyLoad: true
+			} );
+
 			function changeMethod( method )
 			{
 				if ( method == "off" )
