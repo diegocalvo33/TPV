@@ -845,6 +845,14 @@
 				lazyLoad: false
 			} );
 
+			if( /webOS|iPhone|iPad|iPod|/i.test( navigator.userAgent ) ) 
+			{
+				alert( "Esto es iOS" );
+			}else
+			{
+				alert( "Esto es android" );
+			}
+
 			function changeMethod( method )
 			{
 				if ( method == "off" )
