@@ -962,7 +962,7 @@
 				$( "#clientSection" ).hide();
 				$( "#paymentSection" ).hide();
 				$( "#exampleModal" ).modal( "show" );
-				setTimeout( function(){ document.getElementById( "mirrorInput" ).focus(); }, 500 );
+				setTimeout( function(){ $( "#mirrorInput" ).focus(); }, 500 );
 				inputMirroed = ID;
 				return inputMirroed
 			}
