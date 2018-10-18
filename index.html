@@ -579,7 +579,7 @@
 													</div>
 
 													<!-- Main input -->
-													<input type="text" class="form-control" onfocus="inputForm( 'text', this.id );" id="mainInput" readonly>
+													<input type="text" class="form-control" id="mainInput" onfocus="inputForm( 'text', this.id );" readonly>
 
 													<div class="input-group-append" id="add_by_SKU_search_button">
 														<span class="input-group-text">
@@ -872,24 +872,34 @@
 				}
 			};
 
+			var device;
 			if( isMobile.Android() ) 
 			{
-				alert( 'Esto es un dispositivo Android' );
+				device = "Android";
 			}else if( isMobile.BlackBerry() ) 
-			{
-				alert( 'Esto es un dispositivo BlackBerry' );
+			{ 
+				device = "BlackBerry";
 			}else if( isMobile.iOS() ) 
 			{
-				alert( 'Esto es un dispositivo iOS' );
+				device = "iOS";
 			}else if( isMobile.Opera() ) 
 			{
-				alert( 'Esto es un dispositivo Opera' );
+				device = "Opera";
 			}else if( isMobile.Windows() ) 
 			{
-				alert( 'Esto es un dispositivo Windows' );
+				device = "Windows";
 			}else if( isMobile.any() ) 
 			{
-				alert( 'Esto es un dispositivo móvil, si especificar cuál' );
+				device = "Other";
+			}else
+			{
+				device = "Desktop";
+			}
+ 
+			if ( device == "iOS" )
+			{
+				document.getElementById( "mainInput" ).removeAttribute( "onfocus", "inputForm( 'text', this.id );" );
+				document.getElementById( "mainInput" ).removeAttribute( "readonly", "" );
 			}
 
 			function changeMethod( method )
