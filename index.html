@@ -845,12 +845,56 @@
 				lazyLoad: false
 			} );
 
-			if( /webOS|iPhone|iPad|iPod|/i.test( navigator.userAgent ) ) 
+			var isMobile = {
+				Android: function() 
+				{
+					return navigator.userAgent.match( /Android/i );
+				},
+				BlackBerry: function() 
+				{
+					return navigator.userAgent.match( /BlackBerry/i );
+				},
+				iOS: function() 
+				{
+					return navigator.userAgent.match( /iPhone|iPad|iPod/i );
+				},
+				Opera: function() 
+				{
+					return navigator.userAgent.match( /Opera Mini/i );
+				},
+				Windows: function() 
+				{
+					return navigator.userAgent.match( /IEMobile/i );
+				},
+				any: function() 
+				{
+					return ( isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows() );
+				}
+			};
+
+			if( isMobile.any() ) 
 			{
-				alert( "Esto es iOS" );
-			}else
+				alert( 'Esto es un dispositivo móvil, si especificar cuál' );
+			}
+			if( isMobile.Android() ) 
 			{
-				alert( "Esto es android" );
+				alert( 'Esto es un dispositivo Android' );
+			}
+			if( isMobile.BlackBerry() ) 
+			{
+				alert( 'Esto es un dispositivo BlackBerry' );
+			}
+			if( isMobile.iOS() ) 
+			{
+				alert( 'Esto es un dispositivo iOS' );
+			}
+			if( isMobile.Opera() ) 
+			{
+				alert( 'Esto es un dispositivo Opera' );
+			}
+			if( isMobile.Windows() ) 
+			{
+				alert( 'Esto es un dispositivo Windows' );
 			}
 
 			function changeMethod( method )
