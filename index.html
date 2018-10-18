@@ -872,29 +872,24 @@
 				}
 			};
 
-			if( isMobile.any() ) 
-			{
-				alert( 'Esto es un dispositivo móvil, si especificar cuál' );
-			}
 			if( isMobile.Android() ) 
 			{
 				alert( 'Esto es un dispositivo Android' );
-			}
-			if( isMobile.BlackBerry() ) 
+			}else if( isMobile.BlackBerry() ) 
 			{
 				alert( 'Esto es un dispositivo BlackBerry' );
-			}
-			if( isMobile.iOS() ) 
+			}else if( isMobile.iOS() ) 
 			{
 				alert( 'Esto es un dispositivo iOS' );
-			}
-			if( isMobile.Opera() ) 
+			}else if( isMobile.Opera() ) 
 			{
 				alert( 'Esto es un dispositivo Opera' );
-			}
-			if( isMobile.Windows() ) 
+			}else if( isMobile.Windows() ) 
 			{
 				alert( 'Esto es un dispositivo Windows' );
+			}else if( isMobile.any() ) 
+			{
+				alert( 'Esto es un dispositivo móvil, si especificar cuál' );
 			}
 
 			function changeMethod( method )
