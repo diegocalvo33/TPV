@@ -6,72 +6,518 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no">
 
-		<link rel="stylesheet" href="fullpage.css">
-		<!-- <link rel="stylesheet" href="examples.css"> -->
-
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
 		<!-- Animate CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" integrity="sha384-OHBBOqpYHNsIqQy8hL1U+8OXf9hH6QRxi0+EODezv82DfnZoV7qoHAZDwMwEJvSw" crossorigin="anonymous">
 
-		<!-- Fontawesome -->
+		<!-- Fontawesome CSS -->
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="../../images/803e5d1a-84ab-11e8-adc0-fa7ae01bbebc.png">
+
+		<!-- Fullpage CSS -->
+		<link rel="stylesheet" href="fullpage.css">
+
+		<!-- APP CSS -->
 		<style>
-			.box
-			{
-				display: inline-block;
-			}
 			@media screen and ( max-width: 527px )
 			{
+				#box-left
+				{
+					height: 220px;
+					width: 320px;
+				}
+
+				#box-right
+				{
+					height: 220px;
+					width: 320px;
+				}
+
+				.amount-screen
+				{
+					height: 110px;
+					width: 320px;
+				}
+
 				.content
 				{
 					height: 440px;
 					width: 320px;
 				}
-				#box-left
+
+				.menu-options div
 				{
-					height: 220px;
+					background-color: purple;
+					color: white;
+					height: 110px;
+					width: 160px;
+				}
+
+				.menu-options-eight div
+				{
+					background-color: purple;
+					color: white;
+					height: 97.5px;
+					width: 160px;
+				}
+
+				.menu-options-four div
+				{
+					background-color: purple;
+					color: white;
+					height: 195px;
+					width: 160px;
+				}
+
+				.menu-options-six div
+				{
+					background-color: purple;
+					color: white;
+					height: 130.6666666667px;
+					width: 160px;
+				}
+
+				.menu-options-two div
+				{
+					background-color: purple;
+					color: white;
+					height: 195px;
 					width: 320px;
 				}
-				#box-right
+
+				.menu-orders div
 				{
-					height: 220px;
-					width: 320px;
+					background-color: purple;
+					color: white;
+					height: 110px;
+					width: 160px;
 				}
 			}
+
 			@media screen and ( min-width: 528px )
 			{
+				#box-left
+				{
+					height: 239px;
+					width: 264px;
+				}
+
+				#box-right
+				{
+					height: 239px;
+					width: 264px;
+				}
+
+				.amount-screen
+				{
+					height: 79.66666666667px;
+					width: 528px;
+				}
+
 				.content
 				{
 					height: 239px;
 					width: 528px;
 				}
-				#box-left
+
+				.menu-options div
 				{
-					height: 239px;
+					background-color: purple;
+					color: white;
+					height: 119.5px;
+					width: 132px;
+				}
+
+				.menu-options-eight div
+				{
+					background-color: purple;
+					color: white;
+					height: 94.5px;
+					width: 132px;
+				}
+
+				.menu-options-four div
+				{
+					background-color: purple;
+					color: white;
+					height: 94.5px;
 					width: 264px;
 				}
-				#box-right
+
+				.menu-options-six div
 				{
-					height: 239px;
+					background-color: purple;
+					color: white;
+					height: 63.66666666667px;
 					width: 264px;
+				}
+
+				.menu-options-two div
+				{
+					background-color: purple;
+					color: white;
+					height: 214px;
+					width: 264px;
+				}
+
+				.menu-orders div
+				{
+					background-color: purple;
+					color: white;
+					height: 79.66666666667px;
+					width: 176px;
 				}
 			}
+
+			.calculator-button
+			{
+				border-radius: 0.5rem;
+				border: 1px solid gray;
+				box-sizing: border-box;
+				cursor: pointer;
+				padding: 0.75rem;
+			}
+
+			.menu-backward-bar
+			{
+				background-color: peru;
+				display: block;
+				height: 50px;
+				width: 100%;
+			}
+
+			.menu-options, 
+			.menu-orders, 
+			.menu-options-four,
+			.menu-options-two,
+			.menu-options-six,
+			.menu-options-eight
+			{
+				-webkit-margin-after: 0px;
+				-webkit-margin-before: 0px;
+				-webkit-margin-end: 0px;
+				-webkit-margin-start: 0px;
+				-webkit-padding-start: 0px;
+				list-style-type: none;
+				margin: 0px;
+			}
+
+			.box,
+			.menu-options li,
+			.menu-options span,
+			.menu-options i,
+			.menu-options div,
+			.menu-options-four li,
+			.menu-options-four span,
+			.menu-options-four i,
+			.menu-options-four div,
+			.menu-options-two li,
+			.menu-options-two span,
+			.menu-options-two i,
+			.menu-options-two div,
+			.menu-options-six li,
+			.menu-options-six span,
+			.menu-options-six i,
+			.menu-options-six div,
+			.menu-options-eight li,
+			.menu-options-eight span,
+			.menu-options-eight i,
+			.menu-options-eight div,
+			.menu-orders li,
+			.menu-orders span,
+			.menu-orders i,
+			.menu-orders div { display: inline-block; }
 		</style>
 
-		<title>Experimento</title>
+		<title>DCT Prime&reg; | TPV</title>
 	</head>
 	<body>
 		<div id="fullpage">
-			<div class="section " id="section0">
-				<h1>Section 1</h1>
-			</div>
 			<div class="section active" id="section1">
 				<div class="slide" id="slide1">
 					<div class="intro">
-						<h1>Slide 2.1</h1>
+						<div class="content">
+							<ul class="menu-options" id="mainOptions">
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsTPV' );">
+										<i class="fa fa-calculator" aria-hidden="true"></i>
+										<span>TPV</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsClients' );">
+										<i class="fa fa-users" aria-hidden="true"></i>
+										<span>Clientes</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsProviders' );"> 
+										<i class="fa fa-users" aria-hidden="true"></i>
+										<span>Proveedores</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsSKU' );">
+										<i class="fa fa-barcode" aria-hidden="true"></i>
+										<span>SKU</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsInventory' );">
+										<i class="fa fa-cubes" aria-hidden="true"></i>
+										<span>Inventario</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsReports' );">
+										<i class="fa fa-folder-open" aria-hidden="true"></i>
+										<span>Reportes</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsModules' );">
+										<i class="fa fa-cogs" aria-hidden="true"></i>
+										<span>Módulos</span>
+									</div>
+								<li>
+									<div onclick="invertDisplays( 'mainOptions', 'menuOptionsStatistics' );">
+										<i class="fa fa-area-chart" aria-hidden="true"></i>
+										<span>Estadísticas</span>
+									</div>
+							</ul>
+
+							<div id="menuOptionsTPV" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsTPV', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-four">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Registradora</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Movimiento</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Corte X</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-barcode" aria-hidden="true"></i>
+											<span>Corte Z</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsClients" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsClients', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-two">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Agregar</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Padrón</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsProviders" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsProviders', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-two">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Agregar</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Padrón</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsSKU" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsSKU', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-six">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Agregar SKU</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Agregar categoría</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Porcentajes</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Agregar nuevo pr</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Padrón</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsInventory" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsInventory', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-four">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Entrada</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Físico</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Salida</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Existencias</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsReports" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsReports', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-eight">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Estados de cuenta</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Cortes de caja</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Flujo de efectivo</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Comprobantes</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Márgenes</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Asistencia</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Saldos</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsModules" style="display: none;">
+								<div class="menu-backward-bar">
+									<button onclick="invertDisplays( 'menuOptionsModules', 'mainOptions' );">Atrás</button>
+								</div>
+								<ul class="menu-options-six">
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Mis datos</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Sucursales</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Almacenes</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Colaboradores</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-calculator" aria-hidden="true"></i>
+											<span>Trabajadores</span>
+										</div>
+									<li>
+										<div>
+											<i class="fa fa-users" aria-hidden="true"></i>
+											<span>Editar</span>
+										</div>
+								</ul>
+							</div>
+
+							<div id="menuOptionsStatistics" style="display: none;">
+								<div class="menu-backward-bar">
+									<table>
+										<tbody>
+											<tr>
+												<td>
+													<button onclick="invertDisplays( 'menuOptionsStatistics', 'mainOptions' );">Atrás</button>
+												</td>
+												<td>
+													<select class="form-control form-control-sm">
+														<option>Mensuales</option>
+														<option>Diarias</option>
+													</select>
+												</td>
+												<td>
+													<select class="form-control form-control-sm">
+														<option>01</option>
+														<option>02</option>
+													</select>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<canvas id="myChart" width="528" height="189"></canvas>
+							</div>
+						<!-- Se quitó la etiqueta de cierre </li> para evitar el espacio en blanco que deja la lista http://www.arumeinformatica.es/blog/espacios-en-blanco-en-listas-con-inline-block/ -->
+						</div>
 					</div>
 				</div>
 				<div class="slide active" id="slide2">
@@ -81,6 +527,12 @@
 								<center style="margin-top: 3.5rem; display: none;">
 									<i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
 								</center>
+								<nav aria-label="breadcrumb">
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item active" aria-current="page">Órdenes</li>
+										<li class="breadcrumb-item"><a href="#">Pendientes</a></li>
+									</ol>
+								</nav>
 								<table class="table table-sm table-hover" style="font-size: 10px; display: ;">
 									<tbody>
 										<tr style="cursor: pointer;" ondblclick="alert( 'Ok' );">
@@ -115,9 +567,9 @@
 									<tbody>
 										<tr>
 											<td style="display: none; width: 60px;" id="add_by_SKU_quantity_div">
-												<input class="form-control form-control-sm" type="number" value="1">
+												<input type="number" class="form-control form-control-sm" onfocus="inputForm( 'number', this.id );" value="1" id="add_by_SKU_quantity">
 											</td>
-											<td
+											<td>
 												<div class="input-group input-group-sm">
 													<div class="input-group-prepend">
 														<span class="input-group-text">
@@ -125,7 +577,10 @@
 															<i class="fa fa-toggle-on" aria-hidden="true" style="cursor: pointer; display: none;" onclick="changeMethod( 'on' );" id="change-method-on"></i>
 														</span>
 													</div>
-													<input type="text" class="form-control">
+
+													<!-- Main input -->
+													<input type="text" class="form-control" onfocus="inputForm( 'text', this.id );" id="mainInput" readonly>
+
 													<div class="input-group-append" id="add_by_SKU_search_button">
 														<span class="input-group-text">
 															<i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
@@ -135,7 +590,7 @@
 											</td>
 											<td style="display: none; width: 90px;" id="add_by_SKU_discount_div">
 												<div class="input-group input-group-sm">
-													<input type="text" class="form-control">
+													<input type="number" class="form-control" onfocus="inputForm( 'number', this.id );" id="add_by_SKU_discount">
 													<div class="input-group-append">
 														<span class="input-group-text">
 															<i class="fa fa-usd" aria-hidden="true" style="cursor: pointer;"></i>
@@ -154,7 +609,7 @@
 										<tbody>
 											<tr>
 												<td style="width: 60px;" id="quantity_td">
-													<input type="number" class="form-control form-control-sm" value="1">
+													<input type="number" class="form-control form-control-sm" value="1" onfocus="inputForm( 'number', this.id );" id="quantity" readonly>
 												</td>
 												<td style="width: 60px;">
 													<input type="text" value="Coca cola de 2 litros edició especial moulin rouge" size="14" style="background: transparent; border: none; font-size: 10px;" readonly>
@@ -167,7 +622,7 @@
 												</td>
 												<td style="display: none; width: 90px;" id="discount_td">
 													<div class="input-group input-group-sm">
-														<input type="number" class="form-control">
+														<input type="number" class="form-control" onfocus="inputForm( 'number', this.id );" id="discount" readonly>
 														<div class="input-group-append">
 															<span class="input-group-text">
 																<i class="fa fa-percent" aria-hidden="true" onclick="changeTypeOfDiscount( 'percent' );" style="cursor: pointer; display: none;" id="change-type-of-discount-percent"></i>
@@ -190,37 +645,211 @@
 					</div>
 				</div>
 				<div class="slide" id="slide3">
-					<h1>Slide 2.3</h1>
+					<div class="content">
+						<div class="amount-screen">
+							<h1>Total: 0.00</h1>
+							<p>Puntos: 0.00</p>
+						</div>
+						<ul class="menu-orders">
+							<li>
+								<div onclick="closeOrder();">
+									<span>Cerrar orden</span>
+								</div>
+							<li>
+								<div>
+									<span>Cotizar</span>
+								</div>
+							<li>
+								<div>
+									<span>Cobro</span>
+								</div>
+							<li>
+								<div>
+									<span>Devolución</span>
+								</div>
+							<li>
+								<div>
+									<span>Nota de crédito</span>
+								</div>
+							<li>
+								<div>
+									<span>Reembolso</span>
+								</div>
+						</ul>
+					</div>
 				</div>
 			</div>
-			<div class="section" id="section2">
-				<div class="intro">
-					<h1>Section 3</h1>
+		</div>
+
+		<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="exampleModal">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-body" id="modalBody">
+
+						<!-- Input form -->
+						<form id="inputForm" style="display: none;">
+							<input autocomplete="off" class="form-control" id="mirrorInput" onkeyup="mirror();">
+							<button class="btn btn-block btn-sm">Aceptar</button>
+						</form>
+
+						<!-- Close sale -->
+						<form id="closeSaleForm" style="display: none;">
+							<div id="clientSection">
+								<div class="input-group input-group-sm">
+									<input type="text" class="form-control" autocomplete="off">
+									<div class="input-group-append">
+										<span class="input-group-text">
+											<i class="fa fa-search" aria-hidden="true" style="cursor: pointer;"></i>
+										</span>
+									</div>
+								</div>
+								<table class="table table-sm table-hover table-bordered">
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Juan Diego Calvo Tamayo</td>
+											<td>
+												<i class="fa fa-address-book-o" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Cindy Nallely Cabrera Marín</td>
+											<td>
+												<i class="fa fa-address-book-o" aria-hidden="true"></i>
+											</td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Victor Halil Delgado Toca</td>
+											<td>
+												<i class="fa fa-address-book-o" aria-hidden="true"></i>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<button type="button" class="btn btn-primary btn-block btn-sm" onclick="invertDisplays( 'clientSection', 'paymentSection' );">Siguiente</button>
+							</div>
+							<div id="paymentSection" style="display: none;">
+								<div class="row">
+									<div class="col">
+										<table class="table table-sm">
+											<tbody>
+												<tr>
+													<td colspan="3">
+														<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+															<label class="btn btn-secondary active">
+																<input type="radio" name="salesChannel" autocomplete="off" checked> Mostrador
+															</label>
+															<label class="btn btn-secondary">
+																<input type="radio" name="salesChannel" autocomplete="off"> Para llevar
+															</label>
+															<label class="btn btn-secondary">
+																<input type="radio" name="salesChannel" autocomplete="off"> A domicilio
+															</label>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>Saldo: </td>
+													<td colspan="2">0.00</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+															<label class="btn btn-secondary active">
+																<input type="radio" name="points" autocomplete="off" checked> Acumula
+															</label>
+															<label class="btn btn-secondary">
+																<input type="radio" name="points" autocomplete="off"> Resta
+															</label>
+														</div>
+													</td>
+													<td colspan="2">0.00</td>
+												</tr>
+												<tr>
+													<td>Total  a pagar: </td>
+													<td colspan="2">0.00</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="col">
+										<table class="table table-sm" style="font-size: 12px;">
+											<tbody>
+												<tr>
+													<td>Efectivo:</td>
+													<td colspan="2">
+														<input type="number" class="form-control form-control-sm" autocomplete="off">
+													</td>
+												</tr>
+												<tr>
+													<td>Tarjeta: </td>
+													<td colspan="2">
+														<input type="number" class="form-control form-control-sm" autocomplete="off">
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<input type="number" class="form-control form-control-sm" autocomplete="off" placeholder="4 dígitos">
+													</td>
+													<td>
+														<select class="form-control form-control-sm">
+															<option>Débito</option>
+															<option>Crédito</option>
+														</select>
+													</td>
+													<td>
+														<select class="form-control form-control-sm">
+															<option>Bancomer</option>
+															<option>Banorte</option>
+															<option>Otro</option>
+														</select>
+													</td>
+												</tr>
+												<tr>
+													<td>Cambio: </td>
+													<td colspan="2">0.00</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+									<div class="container">
+										<button class="btn btn-primary btn-sm btn-block">Aceptar</button>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- AJAX with jQuery -->
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 		<!-- Fullpage JS -->
 		<script src="fullpage.js"></script>
-		<!-- <script src="examples.js"></script> -->
+
+		<!-- Chart JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+		<!-- APP JS -->
 		<script>
 			var myFullpage = new fullpage( "#fullpage", {
-
 				anchors: [ "firstPage", "secondPage", "3rdPage", "4thpage", "lastPage" ],
 				menu: "#menu",
-				lazyLoad: true
+				loopHorizontal: false,
+				lazyLoad: false
 			} );
 
 			function changeMethod( method )
 			{
 				if ( method == "off" )
 				{
-					document.getElementById( "search-SKU-table" ).removeAttribute( "style" ); 
+					document.getElementById( "search-SKU-table" ).removeAttribute( "style" );
 					$( "#change-method-on" ).show();
 					$( "#change-method-off" ).hide();
 					$( "#add_by_SKU_quantity_div" ).show();
@@ -233,7 +862,7 @@
 					$( "#change-method-off" ).show();
 					$( "#add_by_SKU_quantity_div" ).hide();
 					$( "#add_by_SKU_discount_div" ).hide();
-					$( "#add_by_SKU_search_button" ).show();		
+					$( "#add_by_SKU_search_button" ).show();
 				}
 			}
 
@@ -259,9 +888,123 @@
 				}else
 				{
 					$( "#change-type-of-discount-percent" ).hide();
-					$( "#change-type-of-discount-usd" ).show();		
+					$( "#change-type-of-discount-usd" ).show();
 				}
 			}
+
+			function invertDisplays( you_come_from, you_are_going_to )
+			{
+				document.getElementById( you_come_from ).style.display = "none";
+				document.getElementById( you_are_going_to ).removeAttribute( "style" );
+			}
+
+			function digit( areaId, text )
+			{
+				var txtarea = document.getElementById( areaId );
+				if ( !txtarea )
+				{
+					return;
+				}
+
+				var scrollPos = txtarea.scrollTop;
+				var strPos = 0;
+				var br = ( ( txtarea.selectionStart || txtarea.selectionStart == '0' ) ?
+				"ff" : ( document.selection ? "ie" : false ) );
+				if ( br == "ie" )
+				{
+					txtarea.focus();
+					var range = document.selection.createRange();
+					range.moveStart( 'character', -txtarea.value.length );
+					strPos = range.text.length;
+				} else if ( br == "ff" )
+				{
+					strPos = txtarea.selectionStart;
+				}
+
+				var front = ( txtarea.value ).substring( 0, strPos );
+				var back = ( txtarea.value ).substring( strPos, txtarea.value.length );
+				txtarea.value = front + text + back;
+				strPos = strPos + text.length;
+				if ( br == "ie" )
+				{
+					txtarea.focus();
+					var ieRange = document.selection.createRange();
+					ieRange.moveStart( 'character', -txtarea.value.length );
+					ieRange.moveStart( 'character', strPos );
+					ieRange.moveEnd( 'character', 0 );
+					ieRange.select();
+				} else if ( br == "ff" )
+				{
+					txtarea.selectionStart = strPos;
+					txtarea.selectionEnd = strPos;
+					txtarea.focus();
+				}
+
+				txtarea.scrollTop = scrollPos;
+			}
+
+			function closeOrder()
+			{
+				$( "#inputForm" ).hide();
+				$( "#closeSaleForm" ).show();
+				$( "#clientSection" ).show();
+				$( "#paymentSection" ).hide();
+				$( "#exampleModal" ).modal( "show" );
+			}
+
+			var inputMirroed;
+			function mirror(){ $( "#" + inputMirroed ).val( $( "#mirrorInput" ).val() ); }
+			function inputForm( type, ID )
+			{
+				document.getElementById( "mirrorInput" ).setAttribute( "type", type );
+				$( "#inputForm" ).show();
+				$( "#closeSaleForm" ).hide();
+				$( "#clientSection" ).hide();
+				$( "#paymentSection" ).hide();
+				$( "#exampleModal" ).modal( "show" );
+				setTimeout( function(){ document.getElementById( "mirrorInput" ).focus(); }, 500 );
+				inputMirroed = ID;
+				return inputMirroed
+			}
+
+			var ctx = document.getElementById( "myChart" ).getContext( "2d" );
+			var myChart = new Chart( ctx, 
+			{
+				type: "bar",
+				data: {
+				labels: [ "Red", "Blue", "Yellow", "Green", "Purple", "Orange" ],
+				datasets: [ {
+					label: "# of Votes",
+					data: [ 12, 19, 3, 5, 2, 3 ],
+					backgroundColor: [
+						"rgba( 255, 99, 132, 0.2 )",
+						"rgba( 54, 162, 235, 0.2 )",
+						"rgba( 255, 206, 86, 0.2 )",
+						"rgba( 75, 192, 192, 0.2 )",
+						"rgba( 153, 102, 255, 0.2 )",
+						"rgba( 255, 159, 64, 0.2 )"
+					],
+					borderColor: [
+						"rgba( 255,99,132,1 )",
+						"rgba( 54, 162, 235, 1 )",
+						"rgba( 255, 206, 86, 1 )",
+						"rgba( 75, 192, 192, 1 )",
+						"rgba( 153, 102, 255, 1 )",
+						"rgba( 255, 159, 64, 1 )"
+					],
+					borderWidth: 1
+				} ]
+				},
+				options: {
+					scales: {
+						yAxes: [ {
+							ticks: {
+								beginAtZero:true
+							}
+						} ]
+					}
+				}
+			} );
 		</script>
 	</body>
 </html>
